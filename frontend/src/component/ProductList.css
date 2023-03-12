@@ -1,0 +1,78 @@
+
+.cover{
+  display: flex;
+}
+
+
+.dashboard {
+  height: 100vh;
+  width: 100%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: #dde1e7; */
+  color: #dde1e7;
+  /* position: fixed; */
+}
+
+.productListContainer {
+     width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid rgba(0, 0, 0, 0.158);
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
+  
+  #productListHeading {
+    font-family: system-ui;;
+    padding: 0.5vmax;
+    color: rgba(0, 0, 0, 0.637);
+    transition: all 0.5s;
+    margin: 2rem;
+    text-align: center;
+  }
+  
+  .productListTable {
+    background-color: white;
+    border: none !important;
+    width: 120%;
+  }
+  
+  .productListTable div {
+    font: 200 0.5vmax ;
+    color: rgba(0, 0, 0, 0.678);
+    border: none !important;
+  }
+  
+  .productListTable a,
+  .productListTable button {
+    /* color: rgba(0, 0, 0, 0.527); */
+    transition: all 0.5s;
+  }
+
+  .productListTable a:hover {
+    color: tomato;
+  }
+  
+  .productListTable button:hover {
+    color: rgb(236, 30, 30);
+  }
+  MuiDataGrid-cell {
+    background-color: red;;
+  }
+  
+  .MuiDataGrid-columnHeader div {
+    
+    padding: 1mm;
+    color: black;
+    background-color: rgb(170, 226, 231);
+}
+  
+  @media screen and (max-width: 600px) {
+    .productListTable div {
+      font: 300 4vw "Roboto";
+    }
+  }
