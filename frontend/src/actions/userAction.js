@@ -39,7 +39,6 @@ import {
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link, useNavigate } from 'react-router-dom'
 
 // Login
 export const login = (email, password) => async (dispatch) => {
@@ -79,9 +78,7 @@ export const register = (name , email, password) => async (dispatch) => {
   } catch (error) {
     toast.error(error.response.data.message , {position: toast.POSITION.TOP_CENTER ,
     });  
-    
-    
-    console.log(error);
+
     dispatch({
       type: REGISTER_USER_FAIL,
       payload: error.response.data.message,
