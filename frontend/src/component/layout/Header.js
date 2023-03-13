@@ -34,7 +34,6 @@ const Header = () => {
     const signOut = () => {
         dispatch(logout()); 
         window.location.reload();
-       navigate("/login");
     }
 
   return (

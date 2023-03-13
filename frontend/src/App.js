@@ -22,7 +22,7 @@ import AdminPage_Users from './component/AdminPage_Users';
 import AdminPage_Products from './component/AdminPage_Products';
 
 function App() {
-  const {isAuthenticated , user} = useSelector((state) => state.user);
+  const {isAuthenticated , user , error} = useSelector((state) => state.user);
 
   useEffect(() => {
     store.dispatch(loadUser());

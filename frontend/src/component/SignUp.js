@@ -18,10 +18,23 @@ const SignUp = () => {
     (state) => state.allUsers
     );
 
+    const { user} = useSelector(
+        (state) => state.user
+      );
+
     useEffect(() => {
-        dispatch(getAllUsers());   
+        dispatch(getAllUsers());  
+        dispatch(loadUser());  
     } , []);
 
+
+
+    if(user){
+        toast.success("Succesfully registered" , {position: toast.POSITION.TOP_CENTER ,
+            onClose: () => navigate("/")
+        }); 
+        
+    }
   const [newuser, setNewuser] = useState({
     name: "",
     email: "",
@@ -47,10 +60,6 @@ const SignUp = () => {
     }
 
     dispatch(register(name , email , password));
-    
-    toast.success("SignUp Succesfully" , {position: toast.POSITION.TOP_CENTER ,
-        onClose: () => navigate("/")
-    });   
   }
 
 
